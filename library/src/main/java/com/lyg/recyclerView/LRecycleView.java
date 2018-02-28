@@ -6,8 +6,6 @@ import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.google.common.collect.Lists;
-
 import java.util.ArrayList;
 
 public class LRecycleView extends RecyclerView {
@@ -24,8 +22,8 @@ public class LRecycleView extends RecyclerView {
         /** <code>true</code> if the fixed view should be selectable in the list */
         public boolean isSelectable;
     }
-    private ArrayList<FixedViewInfo> mHeaderViewInfos = Lists.newArrayList();
-    private ArrayList<FixedViewInfo> mFooterViewInfos = Lists.newArrayList();
+    private ArrayList<FixedViewInfo> mHeaderViewInfos = new ArrayList<>();
+    private ArrayList<FixedViewInfo> mFooterViewInfos = new ArrayList<>();
     public LRecycleView(Context context) {
         this(context, null);
     }
