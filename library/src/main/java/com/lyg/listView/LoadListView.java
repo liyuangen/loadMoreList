@@ -5,14 +5,14 @@ import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.AbsListView;
-import android.widget.LinearLayout;
+import android.widget.FrameLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.lyg.library.R;
 
 public class LoadListView extends ListView implements AbsListView.OnScrollListener {
-    private LinearLayout footerView;
+    private FrameLayout footerView;
     private boolean isFirst = true;
     private boolean isFinish = true;
     private loadListener loadListener;
@@ -23,7 +23,7 @@ public class LoadListView extends ListView implements AbsListView.OnScrollListen
 
     public LoadListView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        footerView = (LinearLayout) LayoutInflater.from(context)
+        footerView = (FrameLayout) LayoutInflater.from(context)
                 .inflate(R.layout.list_item_footer, this, false);
         setOnScrollListener(this);
     }
